@@ -77,19 +77,19 @@ dependencies {
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
 }
 
-//apply from: '../maven_push.gradle'
+apply from: '../maven_push.gradle'
 
 // publish to jitpack
-afterEvaluate {
-    publishing {
-        publications {
-            // Creates a Maven publication called "release".
-            release(MavenPublication) {
-                from components.release
-                groupId = GROUP
-                artifactId = POM_ARTIFACT_ID
-                version = "6.0.1"
-            }
-        }
-    }
-}
+//afterEvaluate {
+//    publishing {
+//        publications {
+//            // Creates a Maven publication called "release".
+//            release(MavenPublication) {
+//                from components.release
+//                groupId = GROUP
+//                artifactId = POM_ARTIFACT_ID
+//                version = VERSION_NAME
+//            }
+//        }
+//    }
+//}
